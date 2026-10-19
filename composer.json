@@ -1,0 +1,50 @@
+{
+    "name": "plan-parts/oem-iam-parts-cross-matcher",
+    "description": "Laravel package for finding OEM and IAM auto parts analogs via plan.parts API, matched against your uploaded supplier price lists.",
+    "keywords": ["laravel", "auto parts", "oem", "iam", "analogs", "cross-reference", "price list", "aftermarket"],
+    "homepage": "https://plan.parts",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "plan-parts",
+            "email": "help@plan.parts",
+            "homepage": "https://plan.parts"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PlanParts\\CrossMatcher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PlanParts\\CrossMatcher\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PlanParts\\CrossMatcher\\PlanPartsServiceProvider"
+            ],
+            "aliases": {
+                "PlanParts": "PlanParts\\CrossMatcher\\Facades\\PlanParts"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
